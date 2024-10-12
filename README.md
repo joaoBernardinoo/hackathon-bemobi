@@ -175,7 +175,7 @@ Dashboard:
 flowchart TD 
 C[Cliente] --> |Lesado por um problema na cobrança| OO
 IA[Omni Solve - Chatbot]  --> |Identifica problema comum| VDB[Verificação no Banco de Dados Bemobi] 
-VDB --> |Confirma pagamento incosistência na cobrança:| **Q1@{ shape: comment, label: "Cartão Expirado, Pix QR Code Expirado, Atividade Suspeita na conta, Saldo Insuficiente, Não entrega do produto" }**
+VDB --> |Confirma pagamento incosistência na cobrança:| Q1@{ shape: comment, label: "Cartão Expirado, Pix QR Code Expirado, Atividade Suspeita na conta, Saldo Insuficiente, Não entrega do produto" }
 
  
 VDB --> |Pagamento confirmado corretamente| CI[Redirecionar para Empresa Intermediária] 
