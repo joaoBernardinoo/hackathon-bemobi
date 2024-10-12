@@ -14,6 +14,9 @@ const geistMono = localFont({
 
 export const metadata = {
   title: "Omni Solve",
+  icons: {
+    icon: "/logobemobi.png",
+  },
 };
 
 export default function RootLayout({ children }) {
