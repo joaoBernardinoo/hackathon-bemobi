@@ -22,6 +22,7 @@ def arguments():
     parser.add_argument('-b', '--browser', help='Browser que será utilizado para a coleta, (F) para Firefox e (C) para Chrome',
                         action='store', dest='browser', nargs='?', default="f")
     args = parser.parse_args()
+    
     return args
 
 
