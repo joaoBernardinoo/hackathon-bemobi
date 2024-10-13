@@ -120,33 +120,33 @@ const EmpresaIntermediaria = () => {
                   <div className={`${styles.tableCell} ${styles.thBold}`}>Categoria</div>
                   <div className={styles.rowCont}>
                     <div className={`${styles.tableCell} ${styles.th}`}>Operação</div>
-                    <Image src="/SortAscending.svg" alt="Sort Ascending Icon" width={20} height={20} />
+                    <Image src="/SortAscending.svg" alt="Sort Ascending Icon" width={26} height={26} />
                   </div>
                   <div className={styles.rowCont}>
                     <div className={`${styles.tableCell} ${styles.th}`}>n° de solicitações</div>
-                    <Image src="/SortAscending.svg" alt="Sort Ascending Icon" width={20} height={20} />
+                    <Image src="/SortAscending.svg" alt="Sort Ascending Icon" width={26} height={26} />
                   </div>
                   <div className={styles.rowCont}>
                     <div className={`${styles.tableCell} ${styles.th}`}>Urgência</div>
-                    <Image src="/SortAscending.svg" alt="Sort Ascending Icon" width={20} height={20} />
+                    <Image src="/SortAscending.svg" alt="Sort Ascending Icon" width={26} height={26} />
                   </div>
                 </div>
               </div>
               <div className={styles.tableBody}>
                 {complaints.map((complaint, index) => (
-                  <div key={index} className={`${styles.tableRow} ${styles[`coluna${index + 1}`]}`}>
-                    <div className={styles.tableCell}>
+                  <div key={index} className={styles.tableRow}>
+                    <div className={`${styles.tableCell} ${styles.coluna1}`}>
                       <div className={styles.categoryCell}>
-                        <Image src="/caret-circle-right.svg" alt="caret circle" width={20} height={20} />
+                        <Image src="/caret-circle-right.svg" alt="caret circle" width={26} height={26} />
                         <div>{complaint.category}</div>
                       </div>
                     </div>
-                    <div className={styles.tableCell}>
+                    <div className={`${styles.tableCell} ${styles.coluna2}`}>
                       <div className={styles.operationCell}>
                         <p className={styles.operationCellText}>{complaint.operation}</p>
                       </div>
                     </div>
-                    <div className={styles.tableCell}>
+                    <div className={`${styles.tableCell} ${styles.coluna3}`}>
                       <div className={styles.requestsCell}>
                         <p className={styles.requestsCellText}>{complaint.requests}</p>
                         {complaint.trend == "subiu" ? (
@@ -156,12 +156,10 @@ const EmpresaIntermediaria = () => {
                         )}
                       </div>
                     </div>
-                    <div
-                      className={`${styles.tableCell} ${styles.urgencyCell} ${
-                        styles[`urgency-${complaint.urgency.toLowerCase()}`]
-                      }`}
-                    >
-                      * {complaint.urgency}
+                    <div className={`${styles.tableCell} ${styles.coluna4}`}>
+                      <div className={`${styles.urgencyCell} ${styles[`urgency-${complaint.urgency.toLowerCase()}`]}`}>
+                        * {complaint.urgency}
+                      </div>
                     </div>
                   </div>
                 ))}
