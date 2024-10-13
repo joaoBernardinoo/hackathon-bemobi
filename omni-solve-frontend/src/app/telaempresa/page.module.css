@@ -1,9 +1,10 @@
 /* page.module.css */
 
+
 .container {
   display: flex;
-  height: 100vh;
-  background-color: #f9f9f9;
+  height: 10vh;
+  background-color: var(--cor-fundo);
 }
 
 .content {
@@ -14,8 +15,12 @@
 }
 
 .title {
-  font-size: 24px;
-  color: #333;
+  color: var(--Gray-900, #222834);
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 100% */
 }
 
 .details {
@@ -25,6 +30,9 @@
   padding: var(--spacing-150, 12px) 0px;
   align-items: center;
   gap: var(--spacing-150, 12px);
+  border: var(--sds-size-stroke-border) solid black;
+  border-radius: var(--Radius-200);
+  background: #fff;
 }
 
 .details_box {
@@ -45,7 +53,7 @@
   align-items: center;
   gap: 10px;
   border-radius: 10px;
-  background: #e9edf5;
+  background: var(--cor-fundo);
 }
 
 .table {
@@ -54,16 +62,23 @@
 }
 
 .th {
-  background-color: #6a0c9c; /* Cor do cabeçalho */
   color: #ffffff;
   padding: 10px;
   text-align: left;
 }
+.tr {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px var(--font-letter-spacing-normal, 1px);
+  align-items: center;
+}
 
 /* Estilo das células da tabela */
-.td {
-  padding: 10px;
-  color: #333;
+.td:not(:first-child) {
+  padding: 12px var(--Space-200, 8px);
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
 }
 
 /* Estilo para linhas pares */
@@ -84,4 +99,12 @@
   color: green; /* Baixa */
 }
 
-
+.operationCell {
+  display: inline-flex;
+  padding: 4px var(--Space-200, 8px);
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 4px;
+  background: var(--Gray-50, #e9edf5);
+}
