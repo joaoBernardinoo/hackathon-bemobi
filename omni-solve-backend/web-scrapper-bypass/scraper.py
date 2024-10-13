@@ -48,6 +48,22 @@ def create_complaint(soup, url):
     complaint_date = soup.select_one(constants.COMPLAIN_DATE_SELECTOR).text
     complaint_status = soup.select_one(constants.COMPLAIN_STATUS_SELECTOR).text
 
+    resposta_empresa = '--'
+    replica_usuario = '--'
+
+    interaction_list = soup.select_one('div[data-testid="complaint-interaction-list"]')
+    
+    if interaction_list:
+        interactions = interaction_list.select('div[data-testid="complaint-interaction"]')
+        
+        for interaction in interactions:
+            interaction_type = interaction.select_one('h2')
+            if interaction_type and 'Resposta da empresa' in interaction_type.text:
+                resposta_empresa = interaction.select_one('p').text if interaction.select_one('p') else '--'
+            
+            if interaction_type and 'Réplica do consumidor' in interaction_type.text:
+                replica_usuario = interaction.select_one('p').text if interaction.select_one('p') else '--'
+
     reclamacao = Reclamacao(
         url,
         complaint_text,
@@ -57,10 +73,13 @@ def create_complaint(soup, url):
         complaint_status,
         find_and_assign_element(soup, constants.COMPLAIN_CATEGORY_1_SELECTOR),
         find_and_assign_element(soup, constants.COMPLAIN_CATEGORY_2_SELECTOR),
-        find_and_assign_element(soup, constants.COMPLAIN_CATEGORY_3_SELECTOR)
+        find_and_assign_element(soup, constants.COMPLAIN_CATEGORY_3_SELECTOR),
+        resposta_empresa,  # Novo campo
+        replica_usuario  # Novo campo
     )
 
     return reclamacao
+
 
 
 def find_and_assign_element(soup, selector):
