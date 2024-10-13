@@ -1,0 +1,87 @@
+/* page.module.css */
+
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.content {
+  margin-left: 20px;
+  flex: 1;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 24px;
+  color: #333;
+}
+
+.details {
+  display: flex;
+  width: 100%;
+  max-width: 1920px;
+  padding: var(--spacing-150, 12px) 0px;
+  align-items: center;
+  gap: var(--spacing-150, 12px);
+}
+
+.details_box {
+  display: flex;
+  padding: var(--sds-size-space-300) var(--sds-size-space-400);
+  align-items: center;
+  gap: 12px;
+  flex: 1 0 0;
+
+  border-radius: var(--Radius-200);
+  border: var(--sds-size-stroke-border) solid var(--Border-Default-Default);
+}
+
+.details_ico {
+  display: flex;
+  padding: var(--spacing-150, 12px);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #e9edf5;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.th {
+  background-color: #6a0c9c; /* Cor do cabeçalho */
+  color: #ffffff;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Estilo das células da tabela */
+.td {
+  padding: 10px;
+  color: #333;
+}
+
+/* Estilo para linhas pares */
+.even-row {
+  background-color: #f2f2f2; /* Cor das linhas pares */
+}
+
+/* Estilo da urgência */
+.urgency-high {
+  color: red; /* Alta */
+}
+
+.urgency-medium {
+  color: orange; /* Moderada */
+}
+
+.urgency-low {
+  color: green; /* Baixa */
+}
+
+

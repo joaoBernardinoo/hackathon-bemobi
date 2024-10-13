@@ -1,6 +1,6 @@
 // src/app/admin/page.js
 
-"use client"; // Adicione esta linha para tornar o componente um Client Component
+"use client";
 
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
@@ -8,7 +8,6 @@ import { useEffect } from 'react';
 const AdminPage = () => {
   const router = useRouter();
 
-  // Função para redirecionar ao clicar no botão
   const handleRedirect = () => {
     router.push('/telaempresa');
   };
@@ -23,7 +22,7 @@ const AdminPage = () => {
       <button 
         onClick={handleRedirect} 
         style={{
-          padding: '10px 20px',
+          padding: '10px  20px',
           fontSize: '16px',
           color: '#fff',
           backgroundColor: '#0070f3',
