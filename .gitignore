@@ -4,3 +4,6 @@ omni-solve-backend/web-scrapper/Arquivos
 Arquivos/m4u_reclamacoes.csv
 Arquivos/m4u_log.txt
 Database/coleta.db
+omni-solve-backend/web-scrapper-bypass/Arquivos/m4u_log.txt
+omni-solve-backend/web-scrapper-bypass/Arquivos/m4u_reclamacoes.csv
+omni-solve-backend/web-scrapper-bypass/Database/coleta.db

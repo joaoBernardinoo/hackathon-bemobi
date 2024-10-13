@@ -17,7 +17,7 @@
   color: var(--Gray-900, #222834);
   font-size: 32px;
   font-weight: 700;
-  line-height: 32px; /* 100% */
+  line-height: 64px; /* 100% */
   padding-bottom: 36px;
   padding: 10px 20px; /* Adiciona padding ao redor do texto */
   background: #f5f5f5;
@@ -125,14 +125,6 @@
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
-}
-
-.tableRow {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 6px 0px;
-  border-bottom: 1px solid #d3d3d3; /* Adiciona uma linha cinza entre as linhas */
 }
 
 .tableHeader .tableRow {
@@ -244,16 +236,54 @@
 }
 
 /* Estilo de hover para o SVG e o texto */
-.categoryCell:hover img {
+.tableCell:hover img {
   filter: none; /* Remove o filtro cinza, tornando o SVG roxo */
   transform: scale(1.1); /* Aumenta o tamanho do SVG */
 }
 
-.categoryCell:hover div {
+.tableCell:hover .categoryCell {
   color: #5700e4; /* Torna o texto roxo */
+  background-color: #30343a07;
   transform: translateX(5px); /* Move o texto ligeiramente para a direita */
 }
 
 .urgencyCell {
   max-width: fit-content;
 }
+
+
+
+.tableBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* Define 4 colunas com larguras iguais */
+  gap: 16px; /* Espaçamento entre linhas e colunas */
+}
+
+.tableRow {
+  display: contents; /* Garante que o layout se estenda a todas as rows sem criar divs extras */
+}
+
+.tableCell {
+  padding: 12px 16px; /* Adiciona padding nas células */
+}
+
+.tableBody .tableCell  {
+  border-bottom: 1px solid #ddd; /* Linha divisória entre as células */
+}
+
+.categoryCell,
+.operationCell,
+.requestsCell,
+.urgencyCell {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente os itens */
+  max-width: fit-content;
+  
+}
+
+.coluna1 { grid-column: 1; }
+.coluna2 { grid-column: 2; }
+.coluna3 { grid-column: 3; }
+.coluna4 { grid-column: 4; }
+
+
