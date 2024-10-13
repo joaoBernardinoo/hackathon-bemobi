@@ -3,14 +3,16 @@
   --cor-secundaria: #020f5b;
   --cor-terciaria: #6924f2;
   --cor-texto: #000;
-  --cor-fundo: #f0f1fa;
+  --cor-fundo: #305fbc;
   --Radius-200: 8px;
-  --sds-size-stroke-border: 1px;
+  --sds-size-stroke-border: 4px;
   --Border-Default-Default: #d9d9d9;
-  --sds-size-space-400: 16px;
+  --sds-size-space-400: 100px;
   --sds-size-space-300: 12px;
   --spacing-150: 12px;
-  --font-letter-spacing-normal: 1px;
+  --font-letter-spacing-normal: 0px;
+  --sds-size-space-300: 12px;
+  --Gray-50: #e9edf5;
 }
 
 body {

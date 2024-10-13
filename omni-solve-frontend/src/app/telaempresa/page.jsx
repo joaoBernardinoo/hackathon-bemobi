@@ -72,8 +72,12 @@ const EmpresaIntermediaria = () => {
             <tbody>
               {complaints.map((complaint, index) => (
                 <tr key={index}>
-                  <td className={styles.td}>{complaint.category}</td>
-                  <td className={styles.td}>{complaint.operation}</td>
+                  <td className={styles.td}>
+                    <div className={styles.categoryCell}>{complaint.category}</div>
+                  </td>
+                  <td className={styles.td}>
+                    <div className={styles.operationCell}>{complaint.operation}</div>
+                  </td>
                   <td className={styles.td}>{complaint.requests}</td>
                   <td className={`${styles.td} ${styles[`urgency-${complaint.urgency.toLowerCase()}`]}`}>
                     {complaint.urgency}
