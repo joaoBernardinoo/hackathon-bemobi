@@ -55,3 +55,11 @@ O Omni Solve utiliza um chatbot inteligente que guia o usuário na identificaç�
 
 O Omni Solve representa uma solução poderosa e inovadora para os desafios enfrentados por clientes e empresas de serviços de assinatura. Com a utilização de GenAI, esperamos transformar a experiência de atendimento ao cliente, aumentando a satisfação e eficiência em toda a cadeia de serviços. Estamos empolgados com o futuro e comprometidos em trazer melhorias significativas para a Bemobi e seus parceiros.
 
+## Informações de Contato
+
+Para mais informações sobre a solućão do hackathon Omni Solve, entre em contato com os membros da equipe:
+
+- **João Bernardino** - Email: jpbernardinoo@gmail.com
+- **Helena Vieira** - Email: vierahln@gmail.com
+- **Priscila Anjos** - Email: prianjss@gmail.com
+- **Caio Hebert** - Email: caiohebertv@gmail.com
