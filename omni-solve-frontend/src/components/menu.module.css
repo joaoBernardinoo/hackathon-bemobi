@@ -1,3 +1,4 @@
+
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -5,6 +6,7 @@
   justify-content: space-between;
   background-color: #622a8b;
   width: 96px;
+  min-width: 96px;
   height: 100vh;
   color: white;
 }
@@ -32,10 +34,10 @@
   height: 57px;
   flex-shrink: 0;
   border-radius: 6px;
-  border: var(--font-letter-spacing-normal, 1px) solid #43205d;
 }
 .selectedOption {
-  background-color: #43205D;
+  border: var(--font-letter-spacing-normal, 1px) solid #43205d;
+  background-color: #5d2886;
 }
 
 .menuItem:hover {

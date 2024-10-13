@@ -1,7 +1,7 @@
 // src/app/admin/page.js
 
 "use client";
-
+import 'typeface-inter';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 

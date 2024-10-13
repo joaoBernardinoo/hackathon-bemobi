@@ -1,14 +1,13 @@
 /* page.module.css */
 
-
 .container {
   display: flex;
-  height: 10vh;
+  width: 100vw;
   background-color: var(--cor-fundo);
 }
 
 .content {
-  margin-left: 20px;
+  margin: 0px 20px;
   flex: 1;
   padding: 20px;
   border-radius: 8px;
@@ -16,18 +15,19 @@
 
 .title {
   color: var(--Gray-900, #222834);
-  font-family: Inter;
   font-size: 32px;
-  font-style: normal;
   font-weight: 700;
   line-height: 32px; /* 100% */
+  padding-bottom: 36px;
+  padding: 10px 20px; /* Adiciona padding ao redor do texto */
+  background: #f5f5f5;
 }
 
 .details {
   display: flex;
-  width: 100%;
-  max-width: 1920px;
-  padding: var(--spacing-150, 12px) 0px;
+  width: 88.5vw;
+  max-width: 1900px;
+  padding: var(--spacing-150, 12px) 12px;
   align-items: center;
   gap: var(--spacing-150, 12px);
   border: var(--sds-size-stroke-border) solid black;
@@ -53,58 +53,188 @@
   align-items: center;
   gap: 10px;
   border-radius: 10px;
-  background: var(--cor-fundo);
+  background: #e9edf5;
+}
+
+.detailContainer {
+  display: grid;
+  padding: 0px;
+}
+.detailText {
+  align-self: stretch;
+  color: var(--text-base-primary, #1a1a1a);
+  font-size: var(--font-size-2xl, 24px);
+  font-weight: 600;
+  line-height: var(--font-line-height-2xl, 32px); /* 133.333% */
+  letter-spacing: var(--font-letter-spacing-wide, 0.5px);
+}
+
+.detailSubText {
+  color: var(--text-base-secundary, #4d4d4d);
+  font-size: var(--font-size-md, 16px);
+  font-weight: 500;
+  line-height: var(--font-line-height-md, 24px); /* 150% */
+  letter-spacing: var(--font-letter-spacing-normal, 0px);
 }
 
 .table {
-  width: 100%;
-  border-collapse: collapse;
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  border: var(--sds-size-stroke-border) solid var(--black-100, #000);
+  background: #fff;
+  margin-top: 48px;
+  border-radius: var(--Radius-200);
+  max-width: 1920px;
+
+}
+
+.tableHeader {
+  display: flex;
+  flex-direction: column;
+}
+
+.tableBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.thBold {
+  color: var(--text-base-primary, #1a1a1a);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--font-line-height-md, 24px); /* 120% */
+  letter-spacing: var(--font-letter-spacing-wide, 0.5px);
 }
 
 .th {
-  color: #ffffff;
-  padding: 10px;
-  text-align: left;
+  color: var(--text-base-primary, #1a1a1a);
+  text-align: right;
+  font-size: var(--font-size-md, 16px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: var(--font-line-height-md, 24px); /* 150% */
+  letter-spacing: var(--font-letter-spacing-normal, 0px);
 }
-.tr {
+
+.tableRow {
   display: flex;
   justify-content: space-between;
-  padding: 12px var(--font-letter-spacing-normal, 1px);
   align-items: center;
+  padding: 6px 0px;
+  border-bottom: 1px solid #d3d3d3; /* Adiciona uma linha cinza entre as linhas */
+}
+
+.tableCell {
+  flex: 1;
+  padding: 12px;
+}
+
+.categoryCell {
+  display: flex;
+  min-width: 33vw;
+  align-items: center;
+  padding: 0px 50px 0 8px;
+  border-radius: 4px;
+  gap: 10px;
+  flex: 2; /* Torna a coluna de categoria maior */
 }
 
 /* Estilo das células da tabela */
+.td:first-child {
+  width: 50%; /* Define um tamanho maior para a primeira coluna */
+  padding: 12px;
+}
+
 .td:not(:first-child) {
-  padding: 12px var(--Space-200, 8px);
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
+  padding: 12px;
 }
 
 /* Estilo para linhas pares */
 .even-row {
-  background-color: #f2f2f2; /* Cor das linhas pares */
+  background-color: #894949; /* Cor das linhas pares */
 }
 
 /* Estilo da urgência */
-.urgency-high {
+.urgency-alta {
   color: red; /* Alta */
+  background: #fdd3d0;
+  padding: 2px 4px; /* Adiciona um pouco de padding ao redor do texto */
+  border-radius: 4px; /* Adiciona bordas arredondadas */
+  margin-right: 8px; /* Adiciona espaço à direita */
 }
 
-.urgency-medium {
+.urgency-moderada {
   color: orange; /* Moderada */
+  background-color: #fff1c2;
+  padding: 2px 4px; /* Adiciona um pouco de padding ao redor do texto */
+  border-radius: 4px;
+  margin-right: 8px; /* Adiciona espaço à direita */
 }
 
-.urgency-low {
+.urgency-baixa {
+  display: inline;
   color: green; /* Baixa */
+  background-color: #cff7d3;
+  padding: 2px 4px; /* Adiciona um pouco de padding ao redor do texto */
+  border-radius: 4px;
 }
 
 .operationCell {
   display: inline-flex;
-  padding: 4px var(--Space-200, 8px);
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  border-radius: 4px;
+  padding: 0px 8px;
   background: var(--Gray-50, #e9edf5);
+  border-radius: 4px;
+}
+
+.operationCellText {
+  color: var(--Gray-700, #464f60);
+  font-variant-numeric: lining-nums tabular-nums;
+  font-weight: 500;
+  line-height: 18px; /* 112.5% */
+  letter-spacing: 0.48px;
+}
+
+.requestsCell {
+  display: inline-flex;
+  padding: 0px 8px;
+  background: var(--Gray-50, #e9edf5);
+  border-radius: 4px;
+  gap: 2px;
+}
+
+.requestsCellText {
+  color: var(--Gray-700, #464f60);
+  font-variant-numeric: lining-nums tabular-nums;
+  font-weight: 500;
+  line-height: 18px; /* 112.5% */
+  letter-spacing: 0.48px;
+}
+
+/* Estilo normal do SVG */
+.categoryCell img {
+  filter: grayscale(100%); /* Torna o SVG cinza */
+  transition: filter 0.3s ease, transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+/* Estilo normal do texto */
+.categoryCell div {
+  color: var(--sds-color-text-default-default); /* Torna o texto cinza */
+  transition: color 0.3s ease, transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+/* Estilo de hover para o SVG e o texto */
+.categoryCell:hover img {
+  filter: none; /* Remove o filtro cinza, tornando o SVG roxo */
+  transform: scale(1.1); /* Aumenta o tamanho do SVG */
+}
+
+.categoryCell:hover div {
+  color: #5700e4; /* Torna o texto roxo */
+  transform: translateX(5px); /* Move o texto ligeiramente para a direita */
+}
+
+.urgencyCell {
+  width: fit-content;
 }
