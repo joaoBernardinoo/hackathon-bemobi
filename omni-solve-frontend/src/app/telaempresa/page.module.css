@@ -86,7 +86,6 @@
   margin-top: 48px;
   border-radius: var(--Radius-200);
   max-width: 1920px;
-
 }
 
 .tableHeader {
@@ -118,17 +117,37 @@
   letter-spacing: var(--font-letter-spacing-normal, 0px);
 }
 
-.tableRow {
+.rowCont {
   display: flex;
+  width: fit-content;
+  height: 36px;
+  padding: var(--font-letter-spacing-normal, 0px) var(--spacing-150, 12px);
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 0;
+}
+
+.tableRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   padding: 6px 0px;
+  border-bottom: 1px solid #d3d3d3; /* Adiciona uma linha cinza entre as linhas */
+}
+
+.tableHeader .tableRow {
+  display: flex;
+  align-items: center;
+  gap: 10vw;
+  padding: 6px 0px;
+  margin-right: 6vw;
   border-bottom: 1px solid #d3d3d3; /* Adiciona uma linha cinza entre as linhas */
 }
 
 .tableCell {
   flex: 1;
   padding: 12px;
+  
 }
 
 .categoryCell {
@@ -236,5 +255,5 @@
 }
 
 .urgencyCell {
-  width: fit-content;
+  max-width: fit-content;
 }

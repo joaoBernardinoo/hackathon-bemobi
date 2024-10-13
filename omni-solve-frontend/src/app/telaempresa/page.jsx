@@ -118,9 +118,18 @@ const EmpresaIntermediaria = () => {
               <div className={styles.tableHeader}>
                 <div className={styles.tableRow}>
                   <div className={`${styles.tableCell} ${styles.thBold}`}>Categoria</div>
-                  <div className={`${styles.tableCell} ${styles.th}`}>Operação</div>
-                  <div className={`${styles.tableCell} ${styles.th}`}>n° de solicitações</div>
-                  <div className={`${styles.tableCell} ${styles.th}`}>Urgência</div>
+                  <div className={styles.rowCont}>
+                    <div className={`${styles.tableCell} ${styles.th}`}>Operação</div>
+                    <Image src="/SortAscending.svg" alt="Sort Ascending Icon" width={20} height={20} />
+                  </div>
+                  <div className={styles.rowCont}>
+                    <div className={`${styles.tableCell} ${styles.th}`}>n° de solicitações</div>
+                    <Image src="/SortAscending.svg" alt="Sort Ascending Icon" width={20} height={20} />
+                  </div>
+                  <div className={styles.rowCont}>
+                    <div className={`${styles.tableCell} ${styles.th}`}>Urgência</div>
+                    <Image src="/SortAscending.svg" alt="Sort Ascending Icon" width={20} height={20} />
+                  </div>
                 </div>
               </div>
               <div className={styles.tableBody}>
